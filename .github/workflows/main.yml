@@ -15,7 +15,8 @@ jobs:
       app_icons: 'icons/DemoApp_512.icns'
       app_identifier: 'org.feenk.gtdemo'
       app_primary_bundle_id: "org.feenk.gtdemo-vm-x86-64"
-    secrets:
+      product_entitlements_path: resources/Product.entitlements
+    secrets: 
       # Signing Secrets
       signing_identity: ${{ secrets.FEENK_APPLE_MACOS_DEVELOPER_ID }}
       certificate: ${{ secrets.FEENK_APPLE_MACOS_DEVELOPER_ID_APP_DISTRIBUTION_P12_FILE }}
