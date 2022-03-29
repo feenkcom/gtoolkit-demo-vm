@@ -11,7 +11,7 @@ jobs:
     uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-macos-x86-64.yml@main
     with: 
       app_name: 'GtDemo'
-      app_author: '"\"feenk gmbh\" <contact@feenk.com>"'
+      app_author: '"feenk gmbh" <contact@feenk.com>'
       app_icons: 'icons/DemoApp_512.icns'
       app_identifier: 'org.feenk.gtdemo'
       app_primary_bundle_id: "org.feenk.gtdemo-vm-x86-64"
@@ -35,13 +35,13 @@ jobs:
     uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-linux-x86-64.yml@main
     with: 
       app_name: 'GtDemo'
-      app_author: '"\"feenk gmbh\" <contact@feenk.com>"'
+      app_author: '"feenk gmbh" <contact@feenk.com>'
       app_identifier: 'org.feenk.gtdemo-vm-x86-64'
 
   gtDemo_Windows_x86_64:
     uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-windows-x86-64.yml@main
     with: 
       app_name: 'GtDemo'
-      app_author: '"\"feenk gmbh\" <contact@feenk.com>"'
+      app_author: '"feenk gmbh" <contact@feenk.com>'
       app_icons: 'icons\DemoApp_256.ico'
       app_identifier: 'org.feenk.gtdemo-vm-x86-64'
