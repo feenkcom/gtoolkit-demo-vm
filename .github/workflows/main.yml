@@ -46,3 +46,13 @@ jobs:
       app_author: 'feenk gmbh <contact@feenk.com>'
       app_icons: 'icons\DemoApp_256.ico'
       app_identifier: 'org.feenk.gtdemo-vm-x86-64'
+
+  Release_VMs: 
+    uses: feenkcom/gtoolkit-custom-app/.github/workflows/release-artifacts.yml@main
+    needs: 
+      - gtDemo_MacOS_x86_64
+      - gtDemo_Linux_x86_64
+      - gtDemo_Windows_x86_64
+    with:
+      artifacts: ${{ needs.gtDemo_MacOS_x86_64.outputs.macos_release_zip }} ${{ needs.gtDemo_Linux_x86_64.outputs.linux_release_zip }} ${{ needs.gtDemo_Windows_x86_64.outputs.Windows_release_zip }}
+      github_token: ${{ secrets.GITHUB_TOKEN }}
