@@ -1,0 +1,47 @@
+name: Build GToolkit Demo VM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  gtDemo_MacOS_x86_64:
+    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-macos-x86-64.yml
+    with: 
+      app_name: 'GtDemo'
+      app_author: '"feenk gmbh" <contact@feenk.com>'
+      app_icons: 'icons/DemoApp_512.icns'
+      app_identifier: 'org.feenk.gtdemo'
+      app_primary_bundle_id: "org.feenk.gtdemo-vm-x86-64"
+    secrets:
+      # Signing Secrets
+      signing_identity: ${{ secrets.FEENK_APPLE_MACOS_DEVELOPER_ID }}
+      certificate: ${{ secrets.FEENK_APPLE_MACOS_DEVELOPER_ID_APP_DISTRIBUTION_P12_FILE }}
+      certificate_password: ${{ secrets.FEENK_APPLE_MACOS_DEVELOPER_ID_APP_DISTRIBUTION_P12_PASS }} 
+
+      # Notarization Secrets
+      itc_provider: ${{ secrets.FEENK_APPLE_MACOS_TEAM_ID }}
+      # Notarization authentication using login and password
+      apple_developer_login: ${{ secrets.FEENK_APPLE_DEVELOPER_NAME }}
+      apple_developer_password: ${{ secrets.FEENK_APPLE_DEVELOPER_PASSWORD }}
+      # The following three secrets are another example of authentication that we do not use in this example.
+      # api_key_id: ${{ secrets.FEENK_APPLE_MACOS_APPSTORE_API_KEY_ID }}
+      # api_issuer_id: ${{ secrets.FEENK_APPLE_MACOS_APPSTORE_API_ISSUER_ID }}
+      # api_private_key: ${{ secrets.FEENK_APPLE_MACOS_APPSTORE_API_PRIVATE_KEY }}
+
+  gtDemo_Linux_x86_64:
+    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-linux-x86-64.yml
+    with: 
+      app_name: 'GtDemo'
+      app_author: '"feenk gmbh" <contact@feenk.com>'
+      app_identifier: 'org.feenk.gtdemo-vm-x86-64'
+
+  gtDemo_Windows_x86_64:
+    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-windows-x86-64.yml
+    with: 
+      app_name: 'GtDemo'
+      app_author: '"feenk gmbh" <contact@feenk.com>'
+      app_icons: 'icons\DemoApp_256.ico'
+      app_identifier: 'org.feenk.gtdemo-vm-x86-64'
