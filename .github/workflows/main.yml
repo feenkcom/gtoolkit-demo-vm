@@ -8,7 +8,7 @@ on:
 jobs:
 
   gtDemo_MacOS_x86_64:
-    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-macos-x86-64.yml
+    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-macos-x86-64.yml@main
     with: 
       app_name: 'GtDemo'
       app_author: '"feenk gmbh" <contact@feenk.com>'
@@ -32,14 +32,14 @@ jobs:
       # api_private_key: ${{ secrets.FEENK_APPLE_MACOS_APPSTORE_API_PRIVATE_KEY }}
 
   gtDemo_Linux_x86_64:
-    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-linux-x86-64.yml
+    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-linux-x86-64.yml@main
     with: 
       app_name: 'GtDemo'
       app_author: '"feenk gmbh" <contact@feenk.com>'
       app_identifier: 'org.feenk.gtdemo-vm-x86-64'
 
   gtDemo_Windows_x86_64:
-    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-windows-x86-64.yml
+    uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-windows-x86-64.yml@main
     with: 
       app_name: 'GtDemo'
       app_author: '"feenk gmbh" <contact@feenk.com>'
