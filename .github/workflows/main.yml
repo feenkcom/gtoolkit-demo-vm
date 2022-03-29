@@ -55,4 +55,4 @@ jobs:
       - gtDemo_Windows_x86_64
     with:
       artifacts: ${{ needs.gtDemo_MacOS_x86_64.outputs.macos_release_zip }} ${{ needs.gtDemo_Linux_x86_64.outputs.linux_release_zip }} ${{ needs.gtDemo_Windows_x86_64.outputs.Windows_release_zip }}
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+      release_token: ${{ secrets.GITHUB_TOKEN }}
