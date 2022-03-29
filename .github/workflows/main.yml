@@ -42,6 +42,6 @@ jobs:
     uses: feenkcom/gtoolkit-custom-app/.github/workflows/vm-windows-x86-64.yml@main
     with: 
       app_name: 'GtDemo'
-      app_author: '"feenk gmbh" <contact@feenk.com>'
+      app_author: 'feenk gmbh <contact@feenk.com>'
       app_icons: 'icons\DemoApp_256.ico'
       app_identifier: 'org.feenk.gtdemo-vm-x86-64'
